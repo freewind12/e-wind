@@ -1,8 +1,11 @@
 auto-save-list/
+bookmarks
 eln-cache/
 elpa/
 eshell/
 ido.last
+jdtls/
+projects
 tutorial/
 url/
 custom.el

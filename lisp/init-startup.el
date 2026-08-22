@@ -24,5 +24,7 @@
 (fido-vertical-mode 1)
 ;; 快捷键提示
 (which-key-mode 1)
+;; 书签
+(setq bookmark-save-flag 1)
 
 (provide 'init-startup)
