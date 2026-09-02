@@ -74,17 +74,23 @@
             (setq indent-tabs-mode nil)))
 
 ;;; document
+;; pdf
 (use-package pdf-tools
   :ensure t
   :defer t
   :mode ("\\.pdf\\'" . pdf-view-mode)   ; 自动关联 PDF 文件
   :hook (pdf-view-mode . (lambda ()
 			   (display-line-numbers-mode -1)
-			   (pdf-view-roll-minor-mode)))
+			   (pdf-view-themed-minor-mode 1)
+			   (pdf-view-roll-minor-mode 1)
+			   ))
   :config
+  (setq pdf-view-midnight-colors nil)
+  ;;(setq pdf-view-midnight-colors
+  ;;	(cons (face-foreground 'default nil)
+  ;;            (face-background 'default nil)))
   ;; 安装或更新 epdfinfo 后端（首次使用必须执行）
   (pdf-tools-install)
-
   ;; 基本显示设置
   (setq pdf-view-display-size 'fit-width)   ; 默认适应宽度
   ;; 可选：使用缓存以加速
@@ -111,5 +117,11 @@
              ("q" . kill-this-buffer)               ; 关闭
              )
   )
+
+;; epub
+(use-package nov
+  :ensure t
+  :mode ("\\.epub\\'" . nov-mode)
+  :defer t)
 
 (provide 'init-package)

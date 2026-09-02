@@ -5,7 +5,10 @@ elpa/
 eshell/
 ido.last
 jdtls/
+nov-places
 projects
+recentf
+tramp
 tutorial/
 url/
 custom.el

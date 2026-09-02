@@ -7,4 +7,5 @@
 (require 'init-elpa)
 (require 'init-package)
 (require 'init-ui)
+(require 'init-func)
 (require 'init-kbd)
