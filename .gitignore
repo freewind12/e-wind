@@ -8,7 +8,9 @@ jdtls/
 nov-places
 projects
 recentf
+pyim/
 tramp
+transient/
 tutorial/
 url/
 custom.el
